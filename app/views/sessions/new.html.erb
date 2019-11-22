@@ -1,0 +1,17 @@
+<h1 class="title">Log in</h1>
+<div class="container">  
+  <%= form_for(:session, url: login_path) do |f| %>
+
+    <div class="field">
+      <%= f.label :email, class: 'label is-small' %>
+      <%= f.email_field :email, class: 'input' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password, class: 'label is-small' %>
+      <%= f.password_field :password, class: 'input' %>
+    </div>
+
+    <%= f.submit "Log in", class: 'button' %>
+  <% end %>
+</div>

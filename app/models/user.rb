@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :posts
+  
   before_save   :downcase_email
   before_create :create_remember_digest
 
